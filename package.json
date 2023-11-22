@@ -4,7 +4,7 @@
   "description": "Recipe application",
   "scripts": {
     "start": "parcel starter/index.html",
-    "build": "parcel build starter/index.html"
+    "build": "parcel build starter/index.html --dist-dir ./dist"
   },
   "author": "Natalia",
   "license": "ISC",
@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "core-js": "^3.33.2",
-    "fractional": "^1.0.0",
     "fracty": "^1.0.11",
     "regenerator-runtime": "^0.14.0",
     "sass": "^1.26.10"
