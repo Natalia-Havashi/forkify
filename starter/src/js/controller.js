@@ -9,9 +9,6 @@ import bookmarkView from './views/bookmarkView.js';
 import addRecipeView from './views/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
 
-// if(module.hot){
-//   module.hot.accept();
-// }
 
 const controlRecipes = async function () {
   try {
@@ -41,7 +38,6 @@ const controlSearchReasults = async function () {
     // 2)Load search
     await model.loadSearchResults(query);
     // 3)Render results
-    // resultsView.render(model.state.search.results)
     resultsView.render(model.getSearchResultsPage());
     paginationView.render(model.state.search);
   } catch (err) {
@@ -57,7 +53,6 @@ const controlPagination = function (goToPage) {
 const controlServings = function (newServings) {
   model.updateServings(newServings);
 
-  // recipeView.render(model.state.recipe);
   recipeView.update(model.state.recipe);
 };
 
